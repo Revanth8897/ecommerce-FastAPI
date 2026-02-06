@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link rel="stylesheet" href="css/admin.css">
+
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+
+<h3>Add Product</h3>
+<input type="text" id="name" placeholder="Product name"><br><br>
+<input type="text" id="description" placeholder="Description"><br><br>
+<input type="number" id="price" placeholder="Price"><br><br>
+<input type="number" id="stock" placeholder="Stock"><br><br>
+
+<button onclick="createProduct()">Add Product</button>
+
+<hr>
+
+<h3>All Products</h3>
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="productTable"></tbody>
+</table>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

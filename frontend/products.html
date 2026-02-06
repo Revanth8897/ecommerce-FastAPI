@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products | E-Commerce</title>
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+
+<header class="top-bar">
+  <h2>🛍 My Store</h2>
+
+  <div class="top-actions">
+    <button onclick="goToCart()">🛒 View Cart</button>
+    <a href="admin.html" id="adminBtn" style="display:none;" class="admin-btn">Admin Dashboard</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<section class="products-container">
+
+ <div class="product-card">
+  <img src="images/laptop.png" alt="Laptop">
+  <h3>Laptop</h3>
+  <p>₹1</p>
+  <button onclick="addToCart(1)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+  <img src="images/phone.webp" alt="Phone">
+  <h3>Phone</h3>
+  <p>₹1</p>
+  <button onclick="addToCart(2)">Add to Cart</button>
+</div>
+
+<div class="product-card">
+  <img src="images/headphone.webp" alt="Headphones">
+  <h3>Headphones</h3>
+  <p>₹1</p>
+  <button onclick="addToCart(3)">Add to Cart</button>
+<!-- </div>
+<div id="products"></div>
+<main>
+  <div id="products"></div>
+</main> -->
+
+
+
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/products.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const isAdmin = localStorage.getItem("is_admin");
+    console.log("Admin value:", isAdmin);
+
+    if (isAdmin === "true") {
+      document.getElementById("adminBtn").style.display = "inline-block";
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
